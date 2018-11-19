@@ -9,21 +9,21 @@ import Alphabet from '../components/Alphabet'
 import Dashboard from '../components/Dashboard'
 
 export default class HomeScreen extends React.Component {
-  // static navigationOptions = {
-  //   header: null
-  // };
-  render() {
-    return (
-      <Container>
-        <StatusBarView bg="#f2f5f7"></StatusBarView>
-        <Content>
-          <PageTitle title="Home" />
-          <ModalWindow />
-          <Alphabet />
-          <Dashboard />
-          <Carousel />
-        </Content>
-      </Container>
-    );
-  }
+	// static navigationOptions = {
+	//   header: null
+	// };
+	render() {
+		return (
+			<Container>
+				<StatusBarView bg="#f2f5f7"></StatusBarView>
+				<Content>
+					<PageTitle title="Home" />
+					<ModalWindow />
+					<Alphabet />
+					<Dashboard />
+					<Carousel />
+				</Content>
+			</Container>
+		);
+	}
 }
