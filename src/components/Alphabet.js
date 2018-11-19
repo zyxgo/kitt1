@@ -37,6 +37,7 @@ const Alphabet = (props) => (
   <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{padding:10}}>
   {letters.map((item, index) => (
     <TouchableOpacity
+      key={index} 
       onPress={ () => props.navigation.navigate("Detail", {letter: item[0]}) }>
       <LinearGradient
         colors={[item[1], item[2]]}

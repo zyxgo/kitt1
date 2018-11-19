@@ -15,7 +15,7 @@
     "react-native-vector-icons": "^4.5.0",
     "react-navigation": "^1.1.2"
   },
-  "name": "React Native Starter",
+  "name": "ReactNativeStarter",
   "version": "1.0.0",
   "description": "Hello Expo!",
   "author": "Malik Aliyev"

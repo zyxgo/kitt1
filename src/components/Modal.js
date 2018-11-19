@@ -21,6 +21,7 @@ export default class ModalWindow extends React.Component {
           visible={AppStore.modalVisible}
           onRequestClose={() => {
             alert('Modal has been closed.');
+            this.setModalVisible(!AppStore.modalVisible);
           }}>
           <TouchableOpacity
             style={{alignSelf: 'center', marginTop: 5, position: 'absolute', top: 0, right: 0, zIndex: 9, padding: 20}}

@@ -79,7 +79,7 @@ export default {
 
   // Card
   cardDefaultBg: "#fff",
-  cardBorderColor: "#333",
+  cardBorderColor: "#ccc",
 
   // CheckBox
   CheckboxRadius: platform === "ios" ? 13 : 0,
@@ -118,20 +118,20 @@ export default {
 
   // Footer
   footerHeight: isIphoneX ? 89 : 55,
-  footerDefaultBg: "#fff",
+  footerDefaultBg: platform === "ios" ? "#F8F8F8" : "#4179F7",
   footerPaddingBottom: isIphoneX ? 34 : 0,
 
   // FooterTab
-  tabBarTextColor: "#8d9fa8",
+  tabBarTextColor: "#2874F0",
   tabBarTextSize: platform === "ios" ? 14 : 11,
   activeTab: "#fff",
   sTabBarActiveTextColor: "#007aff",
-  tabBarActiveTextColor: "#07aeff",
-  tabActiveBgColor: "#fff",
+  tabBarActiveTextColor: "#2874F0",
+  tabActiveBgColor: "#cde1f9",
 
   // Header
   toolbarBtnColor: platform === "ios" ? "#007aff" : "#fff",
-  toolbarDefaultBg: "#fff",
+  toolbarDefaultBg: platform === "ios" ? "#F8F8F8" : "#3F51B5",
   toolbarHeight: platform === "ios" ? (isIphoneX ? 88 : 64) : 56,
   toolbarSearchIconSize: platform === "ios" ? 20 : 23,
   toolbarInputColor: platform === "ios" ? "#CECDD2" : "#fff",
@@ -139,7 +139,7 @@ export default {
   searchBarInputHeight: platform === "ios" ? 30 : 50,
   toolbarBtnTextColor: "#000",
   toolbarDefaultBorder: "#a7a6ab",
-  iosStatusbar: "dark-content",
+  iosStatusbar: platform === "ios" ? "dark-content" : "light-content",
   get statusBarColor() {
     return color(this.toolbarDefaultBg)
       .darken(0.2)
@@ -234,8 +234,7 @@ export default {
   titleFontColor: platform === "ios" ? "#000" : "#FFF",
 
   // Other
-  // borderRadiusBase: platform === "ios" ? 5 : 2,
-  borderRadiusBase: 0,
+  borderRadiusBase: platform === "ios" ? 5 : 2,
   borderWidth: 1 / PixelRatio.getPixelSizeForLayoutSize(1),
   contentPadding: 10,
   dropdownLinkColor: "#414142",

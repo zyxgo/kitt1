@@ -12,17 +12,17 @@ export default class Dashboard extends React.Component {
         <View style={{flex: 1, flexDirection: 'row', padding: 10}}>
           <View style={styles.customCard}>
             <Text style={styles.customHeader}>Users</Text>
-            <Text style={{textAlign: 'right', color: '#00b8ff', fontSize: 40, verticalAlign: 'bottom'}}>{AppStore.data.users}</Text>
+            <Text style={{textAlign: 'right', color: '#00b8ff', fontSize: 40}}>{AppStore.data.users}</Text>
           </View>
           <View style={styles.customCard}>
             <Text style={styles.customHeader}>Posts</Text>
-            <Text style={{textAlign: 'right', color: '#00b8ff', fontSize: 40, verticalAlign: 'bottom'}}>{AppStore.data.posts}</Text>
+            <Text style={{textAlign: 'right', color: '#00b8ff', fontSize: 40}}>{AppStore.data.posts}</Text>
           </View>
         </View>
         <View style={{flex: 1, flexDirection: 'row', padding: 10, paddingTop: 0}}>
           <View style={[styles.customCard, {height: null}]}>
             <Text style={styles.customHeader}>Comments</Text>
-            <Text style={{textAlign: 'right', color: '#00b8ff', fontSize: 40, verticalAlign: 'bottom'}}>{AppStore.data.comments}</Text>
+            <Text style={{textAlign: 'right', color: '#00b8ff', fontSize: 40}}>{AppStore.data.comments}</Text>
           </View>
         </View>
       </View>

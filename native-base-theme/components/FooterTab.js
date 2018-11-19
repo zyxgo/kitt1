@@ -19,7 +19,7 @@ export default (variables = variable) => {
         "NativeBase.IconNB": {
           color: variables.tabBarActiveTextColor
         },
-        // backgroundColor: variables.tabActiveBgColor
+        backgroundColor: variables.tabActiveBgColor
       },
       flexDirection: null,
       backgroundColor: "transparent",

@@ -11,7 +11,7 @@ import DetailScreen from './src/screens/DetailScreen';
 import getTheme from './native-base-theme/components';
 import platform from './native-base-theme/variables/platform';
 import AppStore from './src/stores/AppStore.js';
-import {observer} from 'mobx-react';
+// import {observer} from 'mobx-react';
 
 // const HomeStack = StackNavigator({
 //   Home: {
@@ -24,6 +24,8 @@ import {observer} from 'mobx-react';
 //     screen: DetailScreen,
 //   },
 // });
+
+console.disableYellowBox = true;
 
 const Nav =  (MainScreenNavigator = TabNavigator(
   {
@@ -77,7 +79,33 @@ const Nav =  (MainScreenNavigator = TabNavigator(
 
 
 export default class App extends React.Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      isReady: false,
+    };
+  }
+
+  componentDidMount() {
+    this.loadFonts();
+  }
+
+  async loadFonts() {
+    await Expo.Font.loadAsync({
+      Roboto: require("native-base/Fonts/Roboto.ttf"),
+      Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
+      Ionicons: require("@expo/vector-icons/fonts/Ionicons.ttf"),
+      Arial: require("native-base/Fonts/Roboto.ttf"),
+    });
+
+    this.setState({ isReady: true });
+  }
+
   render() {
+    if (!this.state.isReady) {
+      return <Expo.AppLoading />;
+    }
     return (
       <StyleProvider style={getTheme(platform)}>
         <Nav />

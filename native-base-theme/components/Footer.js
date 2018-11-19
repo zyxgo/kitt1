@@ -102,12 +102,10 @@ export default (variables = variable) => {
       platform === "ios" && platformStyle !== "material"
         ? variables.borderWidth
         : undefined,
-    borderTopWidth: .3,
     borderColor:
       platform === "ios" && platformStyle !== "material"
         ? "#cbcbcb"
         : undefined,
-    borderColor: '#f2f2f2',
     height: variables.footerHeight,
     paddingBottom: variables.footerPaddingBottom,
     elevation: 3,
